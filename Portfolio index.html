@@ -2,7 +2,15 @@
 
 <!DOCTYPE html>
 <html>
-        <link
+  <head>
+    <title>Katie Chang - Designer</title>
+    <link rel="icon" href="https://github.com/webprojectkatie/PortfolioKatie/blob/master/pic/k.png?raw=true" type="image/ico" />
+    
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+  </head>
+
+      <link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
@@ -17,8 +25,11 @@
         rel="stylesheet"
       />
       <!-- START NAV -->
-      
+          
       <nav id="navbar" class="nav">
+        <div class="logo">
+        <a href="#welcome-section" ><img src="https://github.com/webprojectkatie/PortfolioKatie/blob/master/pic/k.png?raw=true" alt="Katie"></a>
+        </div>
         <ul class="nav-list">
           <li>
             <a href="#welcome-section">About</a>
@@ -34,15 +45,7 @@
       
       <!-- END NAV -->
       
-      <head>
-            <title>Katie Chang - Designer</title>
-            <link rel="shortcut icon" href="/favicon.ico"/>
-
-            <link rel="bookmark" href="/favicon.ico"/>
-        
-            <meta name="viewport" content="initial-scale=1.0">
-            <meta charset="utf-8">
-      </head>
+      
      
       <!-- START WELCOME SECTION -->
       
@@ -211,10 +214,10 @@
 <style>
 /* Custom properties/variables  */
 :root {
-  --main-white: #f0f0f0;
-  --main-skyblue: #174c77;
-  --main-blue: #45567d;
-  --main-lightblue: #a3dcee;
+  --main-white: white;
+  --main-skyblue: #6699cc;
+  --main-blue: #003366;
+  --main-lightblue: #ABCDEF;
 }
 
 /* Base reset */
@@ -284,7 +287,7 @@ body {
   font-size: 1.8rem; /* 18px */
   font-weight: 400;
   line-height: 1.4;
-  color: var(--main-white);
+  color: var(--main-blue);
 }
 
 h1,
@@ -308,13 +311,27 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--main-white);
+  color: var(--main-blue);
 }
 
 img {
   display: block;
   width: 100%;
 }
+
+/* logo */
+
+.logo {
+  width: 50px;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 1rem;
+  left: 5rem;
+  z-index: 10;
+}
+
+
 
 /* nav */
 
@@ -325,8 +342,6 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--main-skyblue);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
 
@@ -343,17 +358,25 @@ img {
   .nav-list {
     margin: 0 1rem;
   }
+
 }
 
 .nav-list a {
   display: block;
-  font-size: 2.2rem;
-  padding: 2rem;
+  font-size: 2rem;
+  padding: 1rem;
 }
 
+
 .nav-list a:hover {
-  background: var(--main-blue);
+  transform: translateY(10px);
 }
+
+
+.logo a:hover {
+  transform: scale(1.1);
+}
+
 
 /* Welcome section */
 
@@ -363,9 +386,11 @@ img {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  background-color: rgb(117, 203, 230);
-  background-image: linear-gradient(62deg, #9cc1e7 0%, #7cd2e7 100%);
+  height: 95vh;
+  background:linear-gradient(
+      66deg,
+      #ccfffc,
+      #ffcccf);
 }
 
 .welcome-section > p {
@@ -380,7 +405,7 @@ img {
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
-  background: var(--main-blue);
+  background: var(--main-white);
 }
 
 .projects-section-header {
@@ -479,7 +504,7 @@ img {
   width: 100%;
   height: 80vh;
   padding: 0 2rem;
-  background: var(--main-lightblue);
+  background: var(--main-white);
 }
 
 .contact-section-header > h2 {
@@ -507,7 +532,7 @@ img {
 
 .contact-details {
   font-size: 2.4rem;
-  text-shadow: 2px 2px 1px #1f1f1f;
+  
   transition: transform 0.3s ease-out;
 }
 
@@ -518,12 +543,13 @@ img {
 /* Footer */
 
 footer {
-  font-weight: 300;
+  font-weight: 200;
+  font-size: 80%;
   display: flex;
   justify-content: space-evenly;
-  padding: 2rem;
+  padding: 1rem;
   background: var(--main-lightblue);
-  border-top: 4px solid var(--main-skyblue);
+  
 }
 
 footer > p {
