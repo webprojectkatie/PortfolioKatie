@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <h1>  BMI calculator  </h1>
+  <input id="weight" placeholder="weight (kg)">
+  <input id="height" placeholder="height (m)">
+  <button onclick="calculateBmi()">Calculate</button>
+  <div id="output">
+    Please enter your height and weight aboove to calculate your BMI.
+  </div>
+  
+  
+  <script>
+    function calculateBmi(){
+      const weight = Number(document.getElementById("weight").value);
+      const height = Number(document.getElementById("height").value);
+      
+      const bmi =(weight/height)/height;
+      
+      document.getElementById("output").innerHTML ="Your BMI is:" + bmi.toFixed(2);
+      
+    }
+  </script>
+</body>
+</html>
